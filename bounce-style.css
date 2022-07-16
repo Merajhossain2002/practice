@@ -1,0 +1,44 @@
+.field {
+  width: 1250px;
+  height: 500px;
+  border: 2px solid crimson;
+}
+.field:hover .ball{
+  animation-play-state: running;
+}
+@keyframes colorfull-ball {
+  0% {
+    background-color: gold;
+    top: 0px;
+    left: 0px;
+  }
+  25% {
+    background-color: red;
+    left: 300px;
+    top: 400px;
+  }
+  50% {
+    background-color: gold;
+    top: 0px;
+    left: 600px;
+  }
+  75% {
+    background-color: red;
+    top: 400px;
+    left: 900px;
+  }
+  100% {
+    background-color: gold;
+    top: 0px;
+    left: 1150px;
+  }
+}
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: limegreen;
+  position: relative;
+  animation: colorfull-ball 3s ease-in-out 0.1s infinite alternate;
+  animation-play-state:paused;
+}
